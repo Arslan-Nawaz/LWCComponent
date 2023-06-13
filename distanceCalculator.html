@@ -1,5 +1,6 @@
 <template>
     <lightning-card title="Google Distance Calculator">
+        <lightning-combobox label="MODE OF TRAVEL" options={travelOptions} onchange={selectedMode} value={selectedModeValue} class="slds-align_absolute-center"></lightning-combobox>
         <lightning-layout horizontal-align="center" multiple-rows="true">
             <lightning-layout-item flexibility="auto" padding="around-medium" size="12" large-device-size="5" medium-device-size="5">
                     <lightning-input type="search" label="Origin Address" title="Origin Address"  class="searchAddress" name="searchAddress"
@@ -83,6 +84,6 @@
                 <lightning-button label="Get Directions" variant="success" name="getDirectionsButton" onclick={getDirectionsClickHandler}></lightning-button>
             </lightning-layout-item>
         </lightning-layout>
-        
+               
     </lightning-card>
 </template>
